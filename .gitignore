@@ -1,5 +1,7 @@
 node_modules/
-coverage/
+.fdk/
+app/scripts/
 .report.json
-app/scripts
-.fdk
+coverage/
+package-lock.json
+dist/

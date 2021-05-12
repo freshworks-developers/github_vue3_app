@@ -35,6 +35,7 @@ export default {
     const newName = ref(null);
     const state = reactive({ userData: [] });
     const client = ref(null);
+    const fuck = ''
 
     watch(() => {
       if (name.value) {
