@@ -16,7 +16,9 @@
   </div>
 
   <h3>Repository list for {{ name }}</h3>
-  <P v-if="userData.status !== 200"> User not found or no repositories for the user</P>
+  <P v-if="userData.status !== 200">
+    User not found or no repositories for the user</P
+  >
   <ul>
     <li v-for="repo in userData" :key="repo.name">{{ repo.name }}</li>
   </ul>
@@ -35,7 +37,6 @@ export default {
     const newName = ref(null);
     const state = reactive({ userData: [] });
     const client = ref(null);
-    const fuck = ''
 
     watch(() => {
       if (name.value) {
@@ -50,9 +51,9 @@ export default {
               console.log("User Details", JSON.parse(data.response));
             },
             (error) => {
-              state.userData = error
+              state.userData = error;
               console.error("error", error);
-              console.log('state.userData',state.userData);
+              console.log("state.userData", state.userData);
             }
           );
       }
@@ -75,7 +76,6 @@ export default {
 </script>
 
 <style scoped>
-
 </style>
 
 
